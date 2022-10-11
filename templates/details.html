@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Cyborg - Awesome HTML5 Template</title>
+    <title>Estimo - A Software Estimation Tool </title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -69,7 +69,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                         <li><a href="{{url_for('about')}}" >About Us</a></li>
                         <li><a href="{{url_for('calculate')}}">Calculate Estimation</a></li>
                         <li><a href="{{url_for('details')}}" class="active">Details</a></li>
-                        <li><a href="{{url_for('calculate_c')}}">Streams</a></li>
+                        <li><a href="{{url_for('form')}}">Forms</a></li>
 
                     </ul>
                     <a class='menu-trigger'>
@@ -93,13 +93,17 @@ https://templatemo.com/tm-579-cyborg-gaming
             <div class="col-lg-12">
               <div class="feature-banner header-text">
                 <div class="row">
-                  <div class="col-lg-4">
-                    <img src="assets/images/feature-left.jpg" alt="" style="border-radius: 23px;">
+                  <div class="col-lg-6">
+                   <div class="thumb">
+                    <img src="{{url_for('static',filename='assets/images/feature-left.jpg')}}" alt="" style="border-radius: 23px;">
+                      <a href="https://www.youtube.com/watch?v=wUGiIdqjDdk" target="_blank"><i class="fa fa-play"></i></a>
+                     </div>
                   </div>
-                  <div class="col-lg-8">
+
+                  <div class="col-lg-6">
                     <div class="thumb">
-                      <img src="assets/images/feature-right.jpg" alt="" style="border-radius: 23px;">
-                      <a href="https://www.youtube.com/watch?v=r1b03uKWk_M" target="_blank"><i class="fa fa-play"></i></a>
+                      <img src="{{url_for('static',filename='assets/images/feature-right.jpg')}}" alt="" style="border-radius: 23px;">
+                      <a href="https://www.youtube.com/watch?v=lr0vA_p6T7Q" target="_blank"><i class="fa fa-play"></i></a>
                     </div>
                   </div>
                 </div>
@@ -112,48 +116,38 @@ https://templatemo.com/tm-579-cyborg-gaming
           <div class="game-details">
             <div class="row">
               <div class="col-lg-12">
-                <h2>Fortnite Details</h2>
+                <h2>Cocomo Details</h2>
               </div>
               <div class="col-lg-12">
                 <div class="content">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="left-info">
-                        <div class="left">
-                          <h4>Fortnite</h4>
-                          <span>Sandbox</span>
-                        </div>
-                        <ul>
-                          <li><i class="fa fa-star"></i> 4.8</li>
-                          <li><i class="fa fa-download"></i> 2.3M</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="right-info">
-                        <ul>
-                          <li><i class="fa fa-star"></i> 4.8</li>
-                          <li><i class="fa fa-download"></i> 2.3M</li>
-                          <li><i class="fa fa-server"></i> 36GB</li>
-                          <li><i class="fa fa-gamepad"></i> Action</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <img src="assets/images/details-01.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
-                    </div>
-                    <div class="col-lg-4">
-                      <img src="assets/images/details-02.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
-                    </div>
-                    <div class="col-lg-4">
-                      <img src="assets/images/details-03.jpg" alt="" style="border-radius: 23px; margin-bottom: 30px;">
-                    </div>
+
                     <div class="col-lg-12">
-                      <p>Cyborg Gaming is free HTML CSS website template provided by TemplateMo. This is Bootstrap v5.2.0 layout. You can make a <a href="https://paypal.me/templatemo" target="_blank">small contribution via PayPal</a> to info [at] templatemo.com and thank you for supporting. If you want to get the PSD source files, please contact us. Lorem ipsum dolor sit consectetur es dispic dipiscingei elit, sed doers eiusmod lisum hored tempor.</p>
+                      <p>About COCOMO
+                        COCOMO stands for <b>CO</b>nstructive <b>CO</b>st <b>MO</b>del.
+It is is used to estimate the development efforts which are involved in a project. COCOMO is based upon the estimation of lines of code in a system and the time.
+<br>Types of COCOMO Models
+<br>
+<b>Basic</b><br>
+<b>Intermediate</b><br>
+<b>Advanced</b><br><br>
+COCOMO model strategies are classified into 3 categories:
+<br>
+                        <b> Organic</b> -> That is when project is small and simple and the team is small with prior experience.<br>
+                        <b>Semi-detached</b> -> When project has complexity and team requires more experience, better guidance and creativity.<br>
+                        <b>Embedded</b> -> It is when project has fixed requirements of resources and product is developed within very tight constraints.<br><br><b>COCOMO-II</b> is the revised version of the original Cocomo (Constructive Cost Model) and is developed at University of Southern California. It is the model that allows one to estimate the cost, effort and schedule when planning a new software development activity.
+COCOMO 2 includes a range of sub-models. These sub-models produce increasingly detailed software estimates. The sub-models in COCOMO 2 are:<br>
+<b>Application composition model</b> This assumes that systems are created from reusable components, scripting or database programming. It is designed to make estimates of prototype development. Software size estimates are based on application points, and a simple size/productivity formula is used to estimate the effort required.
+<br><b>Early design model</b>-> This model is used during early stages of the system design after the requirements. Estimates are based on function points, which are then converted to number of lines of source code.The formula considers set of seven multipliers.
+<br><b>Reuse model</b>-> This model is used to compute the effort required to integrate reusable components and/or program code that is automatically generated by design or program translation tools. It is usually used in conjunction with the post-architecture model.
+<br><b>Post-architecture model</b> -> Once the system architecture has been designed, a more accurate estimate of the software size can be made. However, it includes a more extensive set of 17 multipliers reflecting personnel capability and product and project characteristics.
+<br>
+                      <br>
+                      </p>
                     </div>
                     <div class="col-lg-12">
                       <div class="main-border-button">
-                        <a href="#">Download Fortnite Now!</a>
+                        <a href="https://www.google.com/search?q=cocomo+software+engineering&sxsrf=ALiCzsaynJlvxzMxEBPBLgHVeci8VOsvuQ%3A1665428882136&ei=km1EY5P2B5fN3LUPsuW76Aw&oq=cocomo+softewar&gs_lcp=Cgdnd3Mtd2l6EAMYADIHCAAQgAQQDTIHCAAQgAQQDTIHCAAQgAQQDTIGCAAQHhANMggIABAIEB4QDTIICAAQCBAeEA0yCAgAEAgQHhANMggIABAIEB4QDTIICAAQCBAeEA0yCAgAEAgQHhANOgcIIxCwAxAnOgoIABBHENYEELADOgcIABCwAxBDOg0IABDkAhDWBBCwAxgBOg8ILhDUAhDIAxCwAxBDGAI6DAguEMgDELADEEMYAjoECCMQJzoECAAQQzoICAAQgAQQsQM6CggAEIAEEIcCEBQ6BgguEAoQQzoFCAAQgAQ6BAguEEM6BwgAEIAEEAo6BggAEBYQHjoICAAQFhAeEApKBAhBGABKBAhGGAFQGViwH2DNJmgBcAF4AIABxAGIAfMLkgEDMC45mAEAoAEByAETwAEB2gEGCAEQARgJ2gEGCAIQARgI&sclient=gws-wiz">Discover other resources!</a>
                       </div>
                     </div>
                   </div>
@@ -163,90 +157,18 @@ https://templatemo.com/tm-579-cyborg-gaming
           </div>
           <!-- ***** Details End ***** -->
 
-          <!-- ***** Other Start ***** -->
-          <div class="other-games">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="heading-section">
-                  <h4><em>Other Related</em> Games</h4>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-01.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-02.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-03.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-02.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-03.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="item">
-                  <img src="assets/images/game-01.jpg" alt="" class="templatemo-item">
-                  <h4>Dota 2</h4><span>Sandbox</span>
-                  <ul>
-                    <li><i class="fa fa-star"></i> 4.8</li>
-                    <li><i class="fa fa-download"></i> 2.3M</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ***** Other End ***** -->
 
         </div>
       </div>
     </div>
   </div>
-  
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
-          
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+          <p>Copyright © <a href="#">Estimo</a>. All rights reserved.
+
+
         </div>
       </div>
     </div>
