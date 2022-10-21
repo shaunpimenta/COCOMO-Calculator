@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5);
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7);
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black;
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: none;
+      background: #26a9e0;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Estimo Estimating Software</h1>
+        <p>Choose your model select your mode and get started</p>
+        <div class="btn-group">
+          <a class="btn-item" href="https://www.geeksforgeeks.org/software-engineering-cocomo-model/">Learn COCOMO</a>
+          <a class="btn-item" href="https://www.javatpoint.com/cocomo-model/">Modes</a>
+        </div>
+      </div>
+      <form action="{{url_for('processbasic')}}" method="post">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i>
+          <h2>Select your Model</h2>
+        </div>
+        <div class="info">
+<!--            <label>-->
+
+<!--            Hello-->
+<!--          <input class="fname" type="radio" name="basic">-->
+<!--                </label>-->
+<!--          <input type="text" name="name" placeholder="Email">-->
+<!--          <input type="text" name="name" placeholder="Phone number">-->
+<!--          <input type="password" name="name" placeholder="Password">-->
+          <select name="model">
+            <option value="Model" selected>Model*</option>
+            <option value="Basic">Basic</option>
+            <option value="Inter">Intermediate</option>
+            <option value="Adv">Advanced</option>
+          </select>
+<!--            <br>-->
+            <h3>Select Type</h3>
+            <select name="mode">
+            <option value=[2.4,1.05,2.5,0.38] selected>Organic</option>
+            <option value=[3,1.12,2.5,0.35]>Semi-Detachhed</option>
+            <option value=[3.6,1.2,2.5,0.32]>Embeded</option>
+
+          </select>
+
+          Enter KLOC : <input type="number" name="kloc" placeholder="Enter KLOC">
+        </div>
+<!--        <div class="checkbox">-->
+<!--          <input type="checkbox" name="checkbox"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy for W3Docs.</a></span>-->
+<!--        </div>-->
+        <button type="submit" value="submit">Start</button>
+      </form>
+    </div>
+  <script>{{msg}}</script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Function points</title>
+    <link rel="stylesheet" href="sloc.css">
+   
+    <!-- script start -->
+   <script>
+       function UFP(){
+        var x=Number(document.getElementById("wf").value)
+        if(x===1){
+            var temp1=3
+            var temp2=4
+            var temp3=3
+            var temp4=7
+            var temp5=5
+        }
+        else if(x===2){
+            var temp1=4
+            var temp2=5
+            var temp3=4
+            var temp4=10
+            var temp5=7
+        }
+        else{
+            if(x===3){
+            var temp1=6
+            var temp2=7
+            var temp3=6
+            var temp4=15
+            var temp5=10
+        }
+        }
+        var p=Number(document.getElementById("in").value)
+        var q=Number(document.getElementById("out").value)
+        var r=Number(document.getElementById("inq").value)
+        var s=Number(document.getElementById("files").value)
+        var t=Number(document.getElementById("ext_int").value)
+        
+         var UFP= ((temp1*p)+(temp2*q)+(temp3*r)+(temp4*s)+(temp5*t))
+        document.getElementById("UFP").value=UFP
+        
+       }
+
+    function func(){
+        var a=Number(prompt("Does the system require reliable backup and recovery?"))
+        var b=Number(prompt("Are data communications required?"))
+        var c=Number(prompt("Are there distributed processing functions?"))
+        var d=Number(prompt("Is performance critical?"))
+        var e=Number(prompt("Will the system run in an existing,heavily utilizid operational environment ?"))
+        var f=Number(prompt("Does the system require on line data entry?"))
+        var g=Number(prompt("Does he online data entry require the input transaction to be built over mulltiple screens oor operations?"))
+        var h=Number(prompt("Are the inputs,outputs,files or inquiries complex?"))
+        var i=Number(prompt("Are the master files updated?"))
+        var j=Number(prompt("Is the internal proccessing complex?"))
+        var k=Number(prompt("Is the code desgined to be reusable?"))
+        var l=Number(prompt("Are conversion and installation included in the design?"))
+        var m=Number(prompt("Is the system designed for multiple installations in diff. organizations?"))
+        var n=Number(prompt("Is the application designed to facilitate change and easse of the use by user?"))
+        var sum=(a+b+c+d+e+f+g+h+i+j+k+l+m+n)
+        document.getElementById("res").value=sum
+        
+    }
+
+    function getffp(){
+
+        var temp=Number(document.getElementById("res").value)
+        var perm=Number(document.getElementById("UFP").value)
+        var result=(perm*(0.65+(0.01*temp)))
+
+        document.getElementById("F_P").value=result
+        
+    }
+    
+    </script>
+    <!-- script end -->
+
+</head>
+<body>
+    <div class="main">
+    <h1>
+        FUNCTION POINT CALCULATOR
+    </h1>
+    <div>
+        <br>
+        <strong>Step:1</strong><hr>
+    </div><br>
+    <div>
+        <table >
+            <tr>
+                <th>S.NO</th>
+                <th>Function Types</th>
+                <th>Simple</th>
+                <th>Average</th>
+                <th>Complex</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Number of User Inputs</td>
+                <td>3</td>
+                <td>4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                    <td>2</td>
+                    <td>Number of User Outputs</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>7</td>
+            </tr>
+            <tr>
+                    <td>3</td>
+                    <td>Number of User Inqueries</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>6</td>
+            </tr>
+            <tr>
+                    <td>4</td>
+                    <td>Number of Files</td>
+                    <td>7</td>
+                    <td>10</td>
+                    <td>15</td>
+            </tr>
+            <tr>
+                    <td>5</td>
+                    <td>Number of External Interfaces</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>10</td>
+            </tr>
+        </table>
+    </div><br>
+    <em><b>--Read the above table.Choose the appropriate weighting factor (i.e.simple,complex or average) and fill its S.no iin the box,and then fill in the function types--</em></b>
+    <br><br>
+
+    <div class="fact"><strong><h3>
+        <table class="fact">
+        <tr>
+        <th class="fact">1. Simple</th>
+        <th class="fact">2. Average</th>
+        <th class="fact">3. Complex</th>
+        </tr>
+     </table>
+     <br>
+       Write the S.No of the weighting factor in the box
+       <input type="text" id="wf" placeholder="weighting factor">
+    </h3></strong>
+    </div>
+
+    <div>
+        <p>
+            <strong>Number of User Inputs:</strong>
+            <input type="text" id="in" placeholder="user inputs">
+        </p>
+        <p>
+                <strong>Number of User Outputs:</strong> <input type="text" id="out" placeholder="user outputs">
+        </p>
+        <p>
+                <strong>Number of Inquiries:</strong> <input type="text" id="inq" placeholder="inquiries">
+        </p>
+        <p>
+                <strong>Number of Files:</strong> <input type="text" id="files" placeholder="files">
+        </p>
+        <p>
+              <strong>Number of External Interfaces:</strong>  <input type="text" id="ext_int" placeholder="external interfaces">
+        </p>
+    </div><br>
+    <button onclick="UFP()"> click me to get UFP</button>
+    <br><br>
+    UFP=<input type="text" id="UFP">
+    <hr>
+    <strong>Step 2:</strong><br><br>
+    <div>
+        <em><strong>--Assign a value of importance to each question. Questions will be asked in the promppt window. write answers only within 0 to 5 where Zero being of low importance and 5 being of high importance.--</strong></em> 
+        <strong><h3>Click on the below button for adding the complexity factors</h3></strong>
+        <P>
+            <button onclick="func()"class="res">CLICK HERE TO OPEN THE PROMPT WINDOW</button>
+        </P>
+        <p>
+            D.I=<input type="text" id="res" class="res">
+        </p>
+    </div>
+    <button onclick="getffp()">CALCULATE FP</button><br>
+    <br><input type="text" id="F_P"placeholder="FP is ">
+    <br><br>
+    
+    <a href="home.html">Go to home page</a>
+    </div>
+</body>
+</html>
